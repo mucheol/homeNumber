@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홈넘버 관리자 페이지</title>
+  <link rel="stylesheet" type="text/css" href="/reset.css">
+  <link rel="stylesheet" type="text/css" href="userManagement.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="/image/homenumber_logo.png" alt="HOME NUMBER logo">
+      <a href="#">사용자 관리</a>
+      <a href="/code/admin/adminManagement.html">관리자</a>
+      <a href="#">운송장 관리</a>
+      <a href="/code/password/changePwd.html">비밀번호 변경</a>
+    </nav>
+  </header>
+  <div class="userManagementContainer">
+    <div class="inner">
+      <p class="title">사용자 정보 관리</p>
+      <form action="">
+        <div class="searchBox">
+          <select name="user_menuSelect" id="" class="select_first select">
+            <option value="">회사명</option>
+            <option value="">사업자등록정보</option>
+            <img src="/image/arrow.png" alt="">
+            <span class="arrowIcon"><img src="/image/arrow.png" alt="arrow Icon/"></span>
+          </select>
+          <input type="text" placeholder="회사이름" id="select_input">
+          <select name="" id="" class="select_second select">
+            <option value="">등록요청</option>
+            <option value="">승인</option>
+            <option value="">탈퇴</option>
+          </select>
+          <input type="submit" value="검색" id="submitBtn">
+        </div>
+      </form>
+      <div class="userList">
+        <p>총 {}건</p>
+        <table>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>이름</th>
+              <th>아이디</th>
+              <th>회사명</th>
+              <th>상태</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr onclick="location.href='userInquiry.html'" >
+                <td>12342</td>
+                <td>원할머니</td>
+                <td>oneGrandMother</td>
+                <td>원할머니투할머니쓰리할머니</td>
+                <td>요청</td>
+              </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination">
+          페이징 처리 부분
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    let inputEle = document.getElementById("select_input");
+    console.log(inputEle);
+    $('select[name=user_menuSelect]').change(function(){
+      let select = $('select[name=user_menuSelect] option:selected').text();
+      console.log(select);
+      if(select == "회사명") {
+        inputEle.placeholder = "회사이름";
+      }else if(select == "사업자등록정보") {
+        inputEle.placeholder = "사업자 등록정보";
+      }else {
+        inputEle.placeholder = "";
+      }
+    })
+  </script>
+</body>
+</html>

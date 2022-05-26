@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홈넘버 관리자 페이지</title>
+  <link rel="stylesheet" type="text/css" href="/reset.css">
+  <link rel="stylesheet" type="text/css" href="adminManagement.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="/image/homenumber_logo.png" alt="HOME NUMBER logo">
+      <a href="/code/userManagement/userManagement.html">사용자 관리</a>
+      <a href="#">관리자</a>
+      <a href="#">운송장 관리</a>
+      <a href="/code/password/changePwd.html">비밀번호 변경</a>
+    </nav>
+  </header>
+  <div class="adminManagementContainer">
+    <div class="inner">
+      <p class="title">관리자 정보 관리</p>
+      <form action="">
+        <div class="searchBox">
+          <select name="admin_menuSelect" id="" class="select_first">
+            <option value="">이름</option>
+            <option value="">이메일</option>
+            <option value="">전화번호</option>
+            <img src="/image/arrow.png" alt="">
+            <span class="arrowIcon"><img src="/image/arrow.png" alt="arrow Icon/"></span>
+          </select>
+          <input type="text" id="select_input" placeholder="이름 입력">
+          <input type="submit" value="검색" id="submitBtn">
+          <button class="userRegist">사용자 등록</button>
+        </div>
+      </form>
+      <div class="adminList">
+        <table>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>이름</th>
+              <th>아이디</th>
+              <th>휴대폰</th>
+              <th>최근 로그인</th>
+              <th>최근 로그인 IP</th>
+            </tr>
+          </thead>
+          <tbody>
+              <tr onclick="location.href='adminInquiry.html'" >
+                <td>12342</td>
+                <td>원할머니</td>
+                <td>oneGrandMother</td>
+                <td>01000000000</td>
+                <td>요청</td>
+                <td>12.345.6.78.910</td>
+              </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination">
+          페이징 처리 부분
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    let inputEle = document.getElementById("select_input");
+    console.log(inputEle);
+    $('select[name=admin_menuSelect]').change(function(){
+      let select = $('select[name=admin_menuSelect] option:selected').text();
+      console.log(select);
+      if(select == "이름") {
+        inputEle.placeholder = "이름 입력";
+      }else if(select == "이메일") {
+        inputEle.placeholder = "이메일 입력";
+      }else if(select == "전화번호") {
+        inputEle.placeholder = "-없이 숫자만 입력";
+      }else {
+        inputEle.placeholder = "";
+      }
+    })
+  </script>
+</body>
+</html>

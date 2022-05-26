@@ -1,0 +1,179 @@
+/* HEADER */
+header {
+  width: 950px;
+  height: 100px;
+  margin:auto;
+  margin-top: 10px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 40px;
+  width: 100%;
+  height: 100%;
+}
+header nav img {
+  width: 95px;
+  margin-right: 37px;
+}
+header nav a {
+  position: relative;
+  height: 100%;
+  padding:0 5px;
+  margin: 0 35px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100px;
+  overflow: hidden;
+}
+header nav a::after {
+  position: absolute;
+  bottom: 30px;
+  left: -100%;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(131, 131, 131);
+  transition: .3s;
+}
+header nav a:hover::after {
+  left:0;
+}
+header nav a:nth-child(2):after {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #dd1920;
+}
+header nav a:nth-child(2) {
+  color: #dd1920;
+}
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.userManagementContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.inner {
+  width: 950px;
+  height: auto;
+}
+/* SEARCHBOX */
+.searchBox {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  height: 160px;
+  background-color: #efefef;
+}
+.searchBox select {
+  display: block;
+  width: 183px;
+  height: 46px;
+  line-height: 28px;
+}
+.searchBox select::-ms-expand {
+  display: none;
+}
+.searchBox input {
+  width: 375px;
+  height: 46px;
+  margin: 0 10px;
+  line-height: 28px;
+}
+.searchBox input::placeholder {
+  color: rgb(197, 197, 197);
+}
+.searchBox input:nth-child(2) {
+  padding-left: 20px;
+}
+.searchBox .select_second {
+  width: 157px;
+}
+.searchBox #submitBtn {
+  width: 104px;
+  height: 46px;
+  margin-right: 0;
+  margin-left: 15px;
+  background-color: #dd1920;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+/* USERLIST */
+.userList {
+  margin-top: 15px;
+}
+.userList > p {
+  font-size: 18px;
+  line-height: 28px;
+  margin: 5px 0;
+}
+table {
+  width: 100%;
+  max-height: 441px;
+}
+thead {
+  background-color: #efefef;
+}
+th {
+  text-align: start;
+  line-height: 65px;
+  padding-left: 40px;
+  font-weight: 700;
+}
+th:nth-child(1),th:nth-child(2),th:nth-child(5) {
+  text-align: center;
+}
+tr {
+  height: 63px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.239);
+  line-height: 64px;
+}
+tbody tr {
+  cursor: pointer;
+}
+tbody tr:hover {
+  background-color: #cbcbcb0d;
+}
+td {
+  padding-left: 40px;
+}
+td:nth-child(1) {
+  width: 100px;
+  text-align: center;
+}
+td:nth-child(2) {
+  width: 200px;
+  text-align: center;
+}
+td:nth-child(3) {
+  width: 200px;
+  text-align: start;
+}
+td:nth-child(4) {
+  width: 300px;
+  text-align: start;
+}
+td:nth-child(5) {
+  width: 300px;
+  text-align: center;
+}
+/* 페이징처리 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}

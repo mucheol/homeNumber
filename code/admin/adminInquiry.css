@@ -1,0 +1,132 @@
+/* HEADER */
+header {
+  width: 950px;
+  height: 100px;
+  margin:auto;
+  margin-top: 10px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 40px;
+  width: 100%;
+  height: 100%;
+}
+header nav img {
+  width: 95px;
+  margin-right: 37px;
+}
+header nav a {
+  position: relative;
+  height: 100%;
+  padding:0 5px;
+  margin: 0 35px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 100px;
+  overflow: hidden;
+}
+header nav a::after {
+  position: absolute;
+  bottom: 30px;
+  left: -100%;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(131, 131, 131);
+  transition: .3s;
+}
+header nav a:hover::after {
+  left:0;
+}
+header nav a:nth-child(3):after {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #dd1920;
+}
+header nav a:nth-child(3) {
+  font-weight: 600;
+  color: #dd1920;
+}
+.adminInquiryContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.inner {
+  width: 950px;
+  height: auto;
+}
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 23px;
+}
+/* SEARCHBOX */
+.searchBox {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  height: 160px;
+  background-color: #efefef;
+}
+.searchBox select {
+  display: block;
+  width: 183px;
+  height: 46px;
+  line-height: 28px;
+}
+.searchBox select::-ms-expand {
+  display: none;
+}
+.searchBox input {
+  width: 375px;
+  height: 46px;
+  margin: 0 10px;
+  line-height: 28px;
+}
+.searchBox input:nth-child(2) {
+  padding-left: 20px;
+}
+.searchBox #submitBtn {
+  width: 104px;
+  height: 46px;
+  margin-right: 0;
+  margin-left: 15px;
+  background-color: #dd1920;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+/* CONTENTBOX */
+.contentBox {
+   display: flex;
+   flex-direction: column;
+}
+.con {
+  display: flex;
+  margin-top: 20px;
+}
+.con:nth-child(1) {
+  margin-top: 45px;
+}
+.con p {
+  width: 138px;
+  text-align: end;
+  margin-right: 30px;
+  font-size: 18px;
+  line-height: 42px;
+  font-weight: 500;
+}
+.con input {
+  width: 490px;
+  height: 42px;
+}

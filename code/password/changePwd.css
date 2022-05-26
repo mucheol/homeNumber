@@ -1,0 +1,159 @@
+/* HEADER */
+header {
+  width: 950px;
+  height: 100px;
+  margin:auto;
+  margin-top: 10px;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 40px;
+  width: 100%;
+  height: 100%;
+}
+header nav img {
+  width: 95px;
+  margin-right: 37px;
+}
+header nav a {
+  position: relative;
+  height: 100%;
+  padding:0 5px;
+  margin: 0 35px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 100px;
+  overflow: hidden;
+}
+header nav a::after {
+  position: absolute;
+  bottom: 30px;
+  left: -100%;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(131, 131, 131);
+  transition: .3s;
+}
+header nav a:hover::after {
+  left:0;
+}
+header nav a:nth-child(5):after {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #dd1920;
+}
+header nav a:nth-child(5) {
+  color: #dd1920;
+}
+.changePwdContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.inner {
+  min-width: 950px;
+  width: 950px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.line {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.179);
+  margin: 50px 0;
+}
+.textBox {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+}
+.textBox .title {
+  font-size: 28px;
+  margin-top: 45px;
+  font-weight: bold;
+}
+.textBox .content {
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 30px;
+}
+.formBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.common_form {
+  width: 430px;
+  height: auto;
+}
+.common_form .formTitle {
+  line-height: 28px;
+  font-weight: 500;
+}
+.common_form input {
+  width: 100%;
+  height: 50px;
+  line-height: 28px;
+  margin-top: 10px;
+}
+.common_form input::placeholder{
+  padding: 5px 0;
+  margin: auto;
+  color: rgb(178, 178, 178);
+}
+.phone_form {
+  margin-top: 35px;
+}
+.phone_upBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.phone_upBox button {
+  width: 220px;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  background-color: #dd1920;
+  border: none;
+}
+.pwd_form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+.pwd_form input:nth-child(3) {
+  margin-top:  20px;
+  margin-bottom: -10px;
+  border-bottom: none;
+}
+.pwd_form input:nth-child(3):focus {
+  border: 1px solid rgba(0, 0, 0, 0.742);
+}
+#submitBtn {
+  width: 430px;
+  height: 60px;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #d3d3d3;
+  border: none;
+  cursor: pointer;
+}

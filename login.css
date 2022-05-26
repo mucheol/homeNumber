@@ -1,0 +1,105 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 950px;
+  height: auto;
+  margin-top: 66px;
+}
+.logoBox {
+  width: 170px;
+  height: 100px;
+}
+.logoBox .logo {
+  width: 100%;
+}
+.textBox {
+  margin-top: 30px;
+  text-align: center;
+}
+.textBox .title {
+  font-size: 28px;
+  margin-top: 45px;
+  font-weight: bold;
+}
+.textBox .content {
+  font-size: 18px;
+  line-height: 28px;
+  margin-top: 30px;
+}
+.formBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.common_form {
+  width: 430px;
+  height: auto;
+}
+.common_form .formTitle {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.common_form input {
+  width: 100%;
+  height: 50px;
+  font-size: 18px;
+  line-height: 28px;
+  padding-left: 20px;
+  margin-top: 10px;
+  border: 1px solid #cbcbcb;
+}
+.common_form input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.742);
+}
+.common_form input::placeholder{
+  padding: 5px 0;
+  margin: auto;
+  color: rgb(178, 178, 178);
+}
+.id_form {
+  display: flex;
+  flex-direction: column;
+}
+.phone_form {
+  margin-top: 35px;
+}
+.phone_upBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.phone_upBox button {
+  width: 220px;
+  height: auto;
+  margin-top: 10px;
+  margin-left: 15px;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  background-color: #dd1920;
+  border: none;
+}
+#submitBtn {
+  width: 430px;
+  height: 60px;
+  margin-top: 50px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #d3d3d3;
+  border: none;
+  cursor: pointer;
+}
