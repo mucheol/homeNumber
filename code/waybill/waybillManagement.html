@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>홈넘버 관리자 페이지</title>
+  <link rel="stylesheet" type="text/css" href="/reset.css">
+  <link rel="stylesheet" type="text/css" href="waybillManagement.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="/image/homenumber_logo.png" alt="HOME NUMBER logo">
+      <a href="/code/userManagement/userManagement.html">사용자 관리</a>
+      <a href="/code/admin/adminManagement.html">관리자</a>
+      <a href="/code/waybill/waybillManagement.html">운송장 관리</a>
+      <a href="/code/password/changePwd.html">비밀번호 변경</a>
+      <a href="/login.html">로그아웃</a>
+    </nav>
+  </header>
+  <div class="waybillManagementContainer">
+    <div class="inner">
+      <p class="title">운송장 대역 현황</p>
+      <div class="searchBox">
+        <select name="" id="" class="select_first select">
+          <option value="">택배사명</option>
+          <option value="">CJ대한통운</option>
+          <option value="">롯데택배</option>
+          <option value="">한진택배</option>
+          <img src="/image/arrow.png" alt="">
+          <span class="arrowIcon"><img src="/image/arrow.png" alt="arrow Icon/"></span>
+        </select>
+        <input type="submit" value="조회" id="submitBtn">
+        <button class="waybill_upload">운송장대역 올리기</button>
+      </div>
+      <div class="waybillList">
+        <table>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>택배사명</th>
+              <th>시작번호</th>
+              <th>종료번호</th>
+              <th>총 갯수</th>
+              <th>남은 수</th>
+              <th>등록일</th>
+              <th>등록자</th>
+              <th>사용시작일자</th>
+              <th>상태</th>
+              <th>수정가능</th>
+            </tr>
+          </thead>
+          <tbody class="tbody">
+            <tr>
+              <td>12342</td>
+              <td>[PRC100AAA]</td>
+              <td>1,000,100</td>
+              <td>2,000,099</td>
+              <td>1,000,000	</td>
+              <td>999,872</td>
+              <td>2022/04/05</td>
+              <td>admin</td>
+              <td>2022/04/18</td>
+              <td>사용중 [Y]</td>
+              <td>요청</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pagination">
+          페이징 처리 부분
+        </div>
+      </div>
+      <!-- 운송장 대역 등록 -->
+      <div class="waybillRegist">
+        
+        <div class="popup">
+          <div class="popup-inner">
+            <form action="">
+              <p>운송장 대역등록</p>
+              <div class="optionBox">
+                <div class="courier">
+                  <p class="option_left">택배사</p>
+                  <div class="option_right courier_select">
+                    <select name="" id="">
+                      <option value="">택배사명</option>
+                      <option value="">CJ대한통운</option>
+                      <option value="">롯데택배</option>
+                      <option value="">한진택배</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="waybillRange">
+                  <p class="option_left">운송장 대역</p>
+                  <div class="option_right wbRange">
+                    <div class="wbRange_top">
+                      <p>시작</p>
+                      <input type="text">
+                    </div>
+                    <div class="wbRange_bottom">
+                      <p>종료</p>
+                      <input type="text">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btnBox">
+                <input type="submit" value="운송장대역 올리기">
+                <button>취소</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="popup_back"></div>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    //tr태그 누르면 팝업창 뜨게
+    $('.waybill_upload').on("click", function() {
+      $('.popup_back').css({'display' : 'block'});
+      $('.waybillRegist').css({'display' : 'flex'});
+    })
+
+    // popup 바깥쪽 누르면 팝업창 꺼지게
+    $('.popup_back').on("click", function(){
+      $(this).css({'display' : 'none'});
+      $('.waybillRegist').css({'display' : 'none'});
+    })
+  </script>
+</body>
+</html>

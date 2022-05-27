@@ -21,7 +21,7 @@ header nav a {
   position: relative;
   height: 100%;
   padding:0 5px;
-  margin: 0 35px;
+  margin: 0 30px;
   font-size: 20px;
   font-weight: 600;
   line-height: 100px;
@@ -105,17 +105,6 @@ header nav a:nth-child(3) {
   cursor: pointer;
   padding: 0;
 }
-.searchBox .userRegist {
-  width: 150px;
-  height: 46px;
-  margin-right: 0;
-  margin-left: 15px;
-  background-color: #fff;
-  color: #000;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-}
 /* ADMINLIST */
 .adminList {
   margin-top: 15px;
@@ -151,12 +140,7 @@ tr {
   height: 63px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.239);
   line-height: 64px;
-}
-tbody tr {
-  cursor: pointer;
-}
-tbody tr:hover {
-  background-color: #cbcbcb0d;
+  cursor:default;
 }
 td:nth-child(1) {
   width: 70px;

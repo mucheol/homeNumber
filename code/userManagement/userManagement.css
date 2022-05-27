@@ -21,7 +21,7 @@ header nav a {
   position: relative;
   height: 100%;
   padding:0 5px;
-  margin: 0 35px;
+  margin: 0 30px;
   font-size: 20px;
   font-weight: 600;
   line-height: 100px;
@@ -140,12 +140,7 @@ tr {
   height: 63px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.239);
   line-height: 64px;
-}
-tbody tr {
-  cursor: pointer;
-}
-tbody tr:hover {
-  background-color: #cbcbcb0d;
+  cursor:default;
 }
 td {
   padding-left: 40px;
@@ -167,8 +162,26 @@ td:nth-child(4) {
   text-align: start;
 }
 td:nth-child(5) {
-  width: 300px;
+  width: 200px;
   text-align: center;
+  padding-left: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+td:nth-child(5) button{
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 2px;
+}
+td:nth-child(5) .btwLine{
+  display: block;
+  width: 1px;
+  height: 20px;
+  margin: 0 4px;
+  background-color: #dd1920;
 }
 /* 페이징처리 */
 .pagination {

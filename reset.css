@@ -171,3 +171,9 @@ input:focus {
   outline: none;
   border: 1px solid rgba(0, 0, 0, 0.742);
 }
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #fff inset;
+}
+button {
+  cursor: pointer;
+}

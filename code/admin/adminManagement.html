@@ -14,9 +14,10 @@
     <nav>
       <img src="/image/homenumber_logo.png" alt="HOME NUMBER logo">
       <a href="/code/userManagement/userManagement.html">사용자 관리</a>
-      <a href="#">관리자</a>
-      <a href="#">운송장 관리</a>
+      <a href="/code/admin/adminManagement.html">관리자</a>
+      <a href="/code/waybill/waybillManagement.html">운송장 관리</a>
       <a href="/code/password/changePwd.html">비밀번호 변경</a>
+      <a href="/login.html">로그아웃</a>
     </nav>
   </header>
   <div class="adminManagementContainer">
@@ -33,7 +34,6 @@
           </select>
           <input type="text" id="select_input" placeholder="이름 입력">
           <input type="submit" value="검색" id="submitBtn">
-          <button class="userRegist">사용자 등록</button>
         </div>
       </form>
       <div class="adminList">
@@ -49,7 +49,7 @@
             </tr>
           </thead>
           <tbody>
-              <tr onclick="location.href='adminInquiry.html'" >
+              <tr>
                 <td>12342</td>
                 <td>원할머니</td>
                 <td>oneGrandMother</td>
