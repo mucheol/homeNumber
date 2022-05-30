@@ -130,10 +130,16 @@ thead {
 th {
   text-align: start;
   line-height: 65px;
-  padding-left: 40px;
+  padding-left: 20px;
   font-weight: 700;
 }
-th:nth-child(1),th:nth-child(2),th:nth-child(5) {
+th:nth-child(1) {
+  padding-left: 10px;
+}
+th:nth-child(6) {
+  padding: 0;
+}
+th:nth-child(1),th:nth-child(6),th:nth-child(7) {
   text-align: center;
 }
 tr {
@@ -143,46 +149,51 @@ tr {
   cursor:default;
 }
 td {
-  padding-left: 40px;
+  padding-left: 20px;
 }
 td:nth-child(1) {
-  width: 100px;
+  width: 70px;
+  padding-left: 10px;
   text-align: center;
 }
 td:nth-child(2) {
-  width: 200px;
-  text-align: center;
+  width: 150px;
 }
 td:nth-child(3) {
-  width: 200px;
-  text-align: start;
+  width: 170px;
 }
 td:nth-child(4) {
-  width: 300px;
+  width: 180px;
   text-align: start;
 }
 td:nth-child(5) {
   width: 200px;
+}
+td:nth-child(6) {
+  padding: 0;
   text-align: center;
-  padding-left: 35px;
+}
+td:nth-child(7) {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-td:nth-child(5) button{
+td:nth-child(7) button{
   background-color: transparent;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
-  padding: 0 2px;
+  padding: 0 4px;
 }
-td:nth-child(5) .btwLine{
+td:nth-child(7) .btwLine{
   display: block;
   width: 1px;
-  height: 20px;
-  margin: 0 4px;
+  height: 15px;
+  margin: 0 2px;
   background-color: #dd1920;
 }
+
+
 /* 페이징처리 */
 .pagination {
   display: flex;
