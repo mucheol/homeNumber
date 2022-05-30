@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>홈넘버 관리자 페이지</title>
+  <link rel="icon" href="/image/homenumber_logo3.png">
+  <title>홈넘버메타 관리자 페이지</title>
   <link rel="stylesheet" type="text/css" href="/reset.css">
   <link rel="stylesheet" type="text/css" href="adminManagement.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
@@ -13,8 +14,8 @@
   <header>
     <nav>
       <img src="/image/homenumber_logo.png" alt="HOME NUMBER logo">
-      <a href="/code/userManagement/userManagement.html">사용자 관리</a>
-      <a href="/code/admin/adminManagement.html">관리자</a>
+      <a href="/code/userManagement/userManagement.html">사용자정보 관리</a>
+      <a href="/code/admin/adminManagement.html">관리 정보 관리</a>
       <a href="/code/waybill/waybillManagement.html">운송장 관리</a>
       <a href="/code/password/changePwd.html">비밀번호 변경</a>
       <a href="/login.html">로그아웃</a>
@@ -22,18 +23,23 @@
   </header>
   <div class="adminManagementContainer">
     <div class="inner">
-      <p class="title">관리자 정보 관리</p>
+      <p class="title">관리 정보 관리</p>
+      <div class="adminBox">
+        <a href="/code/admin/adminManagement.html">관리자 정보 관리</a>
+        <span class="horLine"></span>
+        <a href="/code/admin/backUpSetting.html">백업 환경 설정</a>
+      </div>
       <form action="">
         <div class="searchBox">
           <select name="admin_menuSelect" id="" class="select_first">
             <option value="">이름</option>
-            <option value="">이메일</option>
-            <option value="">전화번호</option>
+            <option value="">아이디</option>
             <img src="/image/arrow.png" alt="">
             <span class="arrowIcon"><img src="/image/arrow.png" alt="arrow Icon/"></span>
           </select>
           <input type="text" id="select_input" placeholder="이름 입력">
-          <input type="submit" value="검색" id="submitBtn">
+          <input type="submit" value="검색" class="btn">
+          <input type="submit" value="등록하기" class="btn2">
         </div>
       </form>
       <div class="adminList">
@@ -43,19 +49,23 @@
               <th>번호</th>
               <th>이름</th>
               <th>아이디</th>
-              <th>휴대폰</th>
-              <th>최근 로그인</th>
-              <th>최근 로그인 IP</th>
+              <th>최근 접속 시간</th>
+              <th>최근 IP</th>
+              <th>처리</th>
             </tr>
           </thead>
           <tbody>
               <tr>
-                <td>12342</td>
-                <td>원할머니</td>
+                <td>1234</td>
+                <td>관리자</td>
                 <td>oneGrandMother</td>
-                <td>01000000000</td>
-                <td>요청</td>
-                <td>12.345.6.78.910</td>
+                <td>2022/05/30</td>
+                <td>211.35.136.225</td>
+                <td>
+                  <button>삭제</button>
+                  <span class="horLine"></span>
+                  <button>비밀번호 초기화</button>
+                </td>
               </tr>
             <tr>
               <td>{}</td>
@@ -114,10 +124,8 @@
       console.log(select);
       if(select == "이름") {
         inputEle.placeholder = "이름 입력";
-      }else if(select == "이메일") {
-        inputEle.placeholder = "이메일 입력";
-      }else if(select == "전화번호") {
-        inputEle.placeholder = "-없이 숫자만 입력";
+      }else if(select == "아이디") {
+        inputEle.placeholder = "아이디 입력";
       }else {
         inputEle.placeholder = "";
       }

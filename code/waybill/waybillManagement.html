@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>홈넘버 관리자 페이지</title>
+  <link rel="icon" href="/image/homenumber_logo3.png">
+  <title>홈넘버메타 관리자 페이지</title>
   <link rel="stylesheet" type="text/css" href="/reset.css">
   <link rel="stylesheet" type="text/css" href="waybillManagement.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
@@ -13,8 +14,8 @@
   <header>
     <nav>
       <img src="/image/homenumber_logo.png" alt="HOME NUMBER logo">
-      <a href="/code/userManagement/userManagement.html">사용자 관리</a>
-      <a href="/code/admin/adminManagement.html">관리자</a>
+      <a href="/code/userManagement/userManagement.html">사용자정보 관리</a>
+      <a href="/code/admin/adminManagement.html">관리 정보 관리</a>
       <a href="/code/waybill/waybillManagement.html">운송장 관리</a>
       <a href="/code/password/changePwd.html">비밀번호 변경</a>
       <a href="/login.html">로그아웃</a>
@@ -22,7 +23,12 @@
   </header>
   <div class="waybillManagementContainer">
     <div class="inner">
-      <p class="title">운송장 대역 현황</p>
+      <p class="title">운송장 관리</p>
+      <div class="waybillBox">
+        <a href="/code/waybill/waybillManagement.html">운송장 대역 목록</a>
+        <span class="horLine"></span>
+        <a href="/code/waybill/waybillRange.html">가용 운송장 수조회</a>
+      </div>
       <div class="searchBox">
         <select name="" id="" class="select_first select">
           <option value="">택배사명</option>

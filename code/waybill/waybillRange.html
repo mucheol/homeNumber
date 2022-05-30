@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/image/homenumber_logo3.png">
+  <title>홈넘버메타 관리자 페이지</title>
+  <link rel="stylesheet" type="text/css" href="/reset.css">
+  <link rel="stylesheet" type="text/css" href="waybillRange.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <img src="/image/homenumber_logo.png" alt="HOME NUMBER logo">
+      <a href="/code/userManagement/userManagement.html">사용자정보 관리</a>
+      <a href="/code/admin/adminManagement.html">관리 정보 관리</a>
+      <a href="/code/waybill/waybillManagement.html">운송장 관리</a>
+      <a href="/code/password/changePwd.html">비밀번호 변경</a>
+      <a href="/login.html">로그아웃</a>
+    </nav>
+  </header>
+  <div class="waybillRangeContainer">
+    <div class="inner">
+      <p class="title">운송장 관리</p>
+      <div class="waybillBox">
+        <a href="/code/waybill/waybillManagement.html">운송장 대역 목록</a>
+        <span class="horLine"></span>
+        <a href="/code/waybill/waybillRange.html">가용 운송장 수조회</a>
+      </div>
+      <p>가용 운송장수</p>
+      <div class="waybillList">
+        <table>
+          <thead>
+            <tr>
+              <th>번호</th>
+              <th>택배사코드</th>
+              <th>택배사 명</th>
+              <th>대역 수</th>
+              <th>총 갯수</th>
+              <th>사용한 수</th>
+              <th>남은 수</th>
+            </tr>
+          </thead>
+          <tbody class="tbody">
+            <tr>
+              <td>12342</td>
+              <td>PRC100AAA</td>
+              <td>CJ 대한통운</td>
+              <td>1000</td>
+              <td>1,000,000	</td>
+              <td>128</td>
+              <td>999,872</td>
+            </tr>
+            <tr>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+              <td>{}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    //tr태그 누르면 팝업창 뜨게
+    $('.waybill_upload').on("click", function() {
+      $('.popup_back').css({'display' : 'block'});
+      $('.waybillRegist').css({'display' : 'flex'});
+    })
+
+    // popup 바깥쪽 누르면 팝업창 꺼지게
+    $('.popup_back').on("click", function(){
+      $(this).css({'display' : 'none'});
+      $('.waybillRegist').css({'display' : 'none'});
+    })
+  </script>
+</body>
+</html>

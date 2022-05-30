@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>홈넘버 관리자 페이지</title>
+  <link rel="icon" href="/image/homenumber_logo3.png">
+  <title>홈넘버메타 관리자 페이지</title>
   <link rel="stylesheet" type="text/css" href="/reset.css">
   <link rel="stylesheet" type="text/css" href="userManagement.css">
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css" />
@@ -13,8 +14,8 @@
   <header>
     <nav>
       <img src="/image/homenumber_logo.png" alt="HOME NUMBER logo">
-      <a href="/code/userManagement/userManagement.html">사용자 관리</a>
-      <a href="/code/admin/adminManagement.html">관리자</a>
+      <a href="/code/userManagement/userManagement.html">사용자정보 관리</a>
+      <a href="/code/admin/adminManagement.html">관리 정보 관리</a>
       <a href="/code/waybill/waybillManagement.html">운송장 관리</a>
       <a href="/code/password/changePwd.html">비밀번호 변경</a>
       <a href="/login.html">로그아웃</a>
@@ -22,7 +23,7 @@
   </header>
   <div class="userManagementContainer">
     <div class="inner">
-      <p class="title">사용자 정보 관리</p>
+      <p class="title">사용자 관리</p>
       <form action="">
         <div class="searchBox">
           <select name="user_menuSelect" id="" class="select_first select">
@@ -34,14 +35,12 @@
           <input type="text" placeholder="회사이름" id="select_input">
           <select name="" id="" class="select_second select">
             <option value="">등록요청</option>
-            <option value="">승인</option>
-            <option value="">탈퇴</option>
+            <option value="">등록승인</option>
           </select>
           <input type="submit" value="검색" id="submitBtn">
         </div>
       </form>
       <div class="userList">
-        <p>총 {}건</p>
         <table>
           <thead>
             <tr>
@@ -65,7 +64,7 @@
                 <td>
                   <button>승인</button>
                   <span class="btwLine"></span>
-                  <button>거절</button>
+                  <button>삭제</button>
                 </td>
               </tr>
             <tr>
