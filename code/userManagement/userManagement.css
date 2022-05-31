@@ -190,10 +190,10 @@ td:nth-child(7) .btwLine{
   background-color: #dd1920;
 }
 
-/* 페이징처리 */
-.pagination {
+#dyn_ul {
+  margin-top: 50px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
+}
+#dyn_ul li {
+  margin:0 10px;
 }
