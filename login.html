@@ -23,8 +23,8 @@
         <div class="formBox">
           <div class="id_form common_form">
             <p class="formTitle">ID 로그인</p>
-            <input type="text" name="id" placeholder="아이디">
-            <input type="password" placeholder="비밀번호">
+            <input type="text" name="id" placeholder="아이디" class="chkId">
+            <input type="password" placeholder="비밀번호" class="chkPwd">
           </div>
           <div class="phone_form common_form">
             <p class="formTitle">등록 휴대폰번호</p>
@@ -32,12 +32,28 @@
               <input type="text" placeholder="-없이 숫자만 입력">
               <button>인증번호 요청</button>
             </div>
-            <input type="text" placeholder="인증번호를 입력하세요.">
+            <input type="text" placeholder="인증번호를 입력하세요." class="chkAu">
           </div>
-          <input type="submit" value="로그인" id="submitBtn">
+          <input type="submit" value="로그인" id="submitBtn" disabled>
         </div>
       </form>
     </div>
   </div>
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $(document).ready(function () {
+        $('.chkAu').on('input', function () {
+            if ($('.chkId').val() != ''
+              || $('.chkPwd').val() != '' 
+              || $('.chkAu').val() != '' 
+              ) {
+                $('#submitBtn').prop('disabled', false);
+            }
+            else {
+                $('#submitBtn').prop('disabled', true);
+            }
+        });
+    });
+  </script>
 </body>
 </html>
