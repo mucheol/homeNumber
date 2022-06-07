@@ -103,3 +103,6 @@
   border: none;
   cursor: pointer;
 }
+#submitBtn.on {
+  background-color: #dd1920;
+}

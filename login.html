@@ -44,13 +44,15 @@
     $(document).ready(function () {
         $('.chkAu').on('input', function () {
             if ($('.chkId').val() != ''
-              || $('.chkPwd').val() != '' 
-              || $('.chkAu').val() != '' 
+              && $('.chkPwd').val() != '' 
+              && $('.chkAu').val() != '' 
               ) {
                 $('#submitBtn').prop('disabled', false);
-            }
-            else {
+                $('#submitBtn').addClass('on');
+              }
+              else {
                 $('#submitBtn').prop('disabled', true);
+                $('#submitBtn').removeClass('on');
             }
         });
     });
