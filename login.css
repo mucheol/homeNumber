@@ -106,3 +106,29 @@
 #submitBtn.on {
   background-color: #dd1920;
 }
+
+@media all and (max-width:768px) {
+  .inner {
+    width: 300px;
+  }
+  .logoBox {
+    width: 120px;
+    height: auto;
+  }
+  .textBox .title{
+    font-size: 18px;
+    margin-top: 30px;
+  }
+  form {
+    width: 300px;
+  }
+  .common_form {
+    width: 100%;
+  }
+  .phone_form {
+    margin-top:  25px;
+  }
+  #submitBtn {
+    width: 100%;
+  }
+}
