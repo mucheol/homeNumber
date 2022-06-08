@@ -54,7 +54,7 @@
               <th>처리</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="dyn_tbody">
               <tr>
                 <td>1234</td>
                 <td>관리자</td>
@@ -109,14 +109,26 @@
             </tr>
           </tbody>
         </table>
-        <div class="pagination">
-          페이징 처리 부분
+        <!-- 페이지네이션 -->
+        <div class="page">
+          <ul class="pagination modal">
+            <li><a href="#" class="first">처음</a></li>
+            <li><a href="#" class="arrow left"><img src="/image/arrow.png" alt="arrow"></a></li>
+            <li><a href="#" class="active num">1</a></li>
+            <li><a href="#" class="num">2</a></li>
+            <li><a href="#" class="num">3</a></li>
+            <li><a href="#" class="num">4</a></li>
+            <li><a href="#" class="num">5</a></li>
+            <li><a href="#" class="arrow right"><img src="/image/arrow.png" alt="arrow"></a></li>
+            <li><a href="#" class="last">끝</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
   <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
+  $(document).ready(function(){
     let inputEle = document.getElementById("select_input");
     console.log(inputEle);
     $('select[name=admin_menuSelect]').change(function(){
@@ -130,6 +142,7 @@
         inputEle.placeholder = "";
       }
     })
+  });
   </script>
 </body>
 </html>

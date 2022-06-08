@@ -177,3 +177,12 @@ input:-webkit-autofill {
 button {
   cursor: pointer;
 }
+@media all and (max-width:768px) {
+  * {
+    font-size: 14px;
+  }
+  input, select {
+    height: 31px;
+    padding-left: 5px;
+  }
+}

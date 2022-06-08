@@ -179,12 +179,66 @@ tr {
   line-height: 64px;
   cursor:default;
 }
-/* 페이징처리 */
+/* 페이지네이션 */
+.page {
+  text-align: center;
+  width: 100%;
+}
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 50px 0;
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.pagination li {
+  display: inline;
+  text-align: center;
+}
+.pagination a {
+  float: left;
+  display: block;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 5px 12px;
+  color: #96a0ad;
+  line-height: 1.5;
+}
+.pagination img {
+  width: 20px;
+}
+.pagination li:nth-child(2) img {
+  transform: rotateZ(90deg);
+}
+.pagination li:nth-child(8) img {
+  transform: rotateZ(270deg);
+}
+.first {
+  margin-right:  15px;
+}
+.last{
+  margin-left : 15px;
+}
+.first:hover, .last:hover, .left:hover, .right:hover {
+  color: #dd1920;
+}
+.pagination a:active {
+  outline: none;
+}
+.modal .num {
+  margin-left: 3px;
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 100%;
+}
+.modal .num:hover {
+  color: #dd1920;
+}
+.modal .num.active {
+  color: #dd1920;
+  cursor: pointer;
 }
 /* 팝업 운송장 대역 등록 */
 .waybillRegist {

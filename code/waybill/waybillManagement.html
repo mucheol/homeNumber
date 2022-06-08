@@ -27,7 +27,7 @@
       <div class="waybillBox">
         <a href="/code/waybill/waybillManagement.html">운송장 대역 목록</a>
         <span class="horLine"></span>
-        <a href="/code/waybill/waybillRange.html">가용 운송장 수조회</a>
+        <a href="/code/waybill/waybillRange.html">가용 운송장 수 조회</a>
       </div>
       <div class="searchBox">
         <select name="" id="" class="select_first select">
@@ -139,8 +139,19 @@
             </tr>
           </tbody>
         </table>
-        <div class="pagination">
-          페이징 처리 부분
+        <!-- 페이지네이션 -->
+        <div class="page">
+          <ul class="pagination modal">
+            <li><a href="#" class="first">처음</a></li>
+            <li><a href="#" class="arrow left"><img src="/image/arrow.png" alt="arrow"></a></li>
+            <li><a href="#" class="active num">1</a></li>
+            <li><a href="#" class="num">2</a></li>
+            <li><a href="#" class="num">3</a></li>
+            <li><a href="#" class="num">4</a></li>
+            <li><a href="#" class="num">5</a></li>
+            <li><a href="#" class="arrow right"><img src="/image/arrow.png" alt="arrow"></a></li>
+            <li><a href="#" class="last">끝</a></li>
+          </ul>
         </div>
       </div>
       <!-- 운송장 대역 등록 -->
@@ -178,7 +189,7 @@
               </div>
               <div class="btnBox">
                 <input type="submit" value="운송장대역 올리기">
-                <button>취소</button>
+                <button class="cancelBtn">취소</button>
               </div>
             </form>
           </div>
@@ -196,8 +207,8 @@
     })
 
     // popup 바깥쪽 누르면 팝업창 꺼지게
-    $('.popup_back').on("click", function(){
-      $(this).css({'display' : 'none'});
+    $('.popup_back, .cancelBtn').on("click", function(){
+      $(".popup_back").css({'display' : 'none'});
       $('.waybillRegist').css({'display' : 'none'});
     })
   </script>
